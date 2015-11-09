@@ -1,0 +1,33 @@
+/*!
+ * Start Bootstrap - Blog Post HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    color: #006633;
+    background-color: #F0F0F0;
+}
+
+.navbar-inverse {
+    background-color: black;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.social {
+  background-color: #F0F0F0;
+  border: none;
+  box-shadow: none;
+}
+footer {
+    margin: 50px 0;
+}
+
+
