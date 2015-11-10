@@ -24,8 +24,9 @@ $(function() {
             }
             $.ajax({
                 url: "https://docs.google.com/forms/d/1j_imTlwRgHF3tmXvG6JbpQY2z-WnozSdW6aUNGZRK-g/formResponse",
+                crossDomain: true,
                 type: "POST",
-                dataType: "xml",
+                dataType: "jsonp",
                 data: {
                     entry_1085946881: name,
                     entry_108955255: phone,
@@ -46,15 +47,16 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function() {
+                error: function(error) {
+                    console.log(error);
                     // Fail message
-                    $('#success').html("<div class='alert alert-danger'>");
-                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    //$('#success > .alert-danger').append("<strong>Sorry " + firstName + " it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:me@example.com?Subject=Message_Me from myprogrammingblog.com;>me@example.com</a> ? Sorry for the inconvenience!");
-                    $('#success > .alert-danger').append('</div>');
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
+                    // $('#success').html("<div class='alert alert-danger'>");
+                    // $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                    //     .append("</button>");
+                    // $('#success > .alert-danger').append("<strong>Sorry " + firstName + " it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:me@example.com?Subject=Message_Me from myprogrammingblog.com;>me@example.com</a> ? Sorry for the inconvenience!");
+                    // $('#success > .alert-danger').append('</div>');
+                    // //clear all fields
+                    // $('#contactForm').trigger("reset");
                 },
             })
         },
